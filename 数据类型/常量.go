@@ -11,10 +11,11 @@ func main() {
 
 	// 显示定义
 	const pURL string = "http://baidu.com"
-	const PI = 3.14
-	fmt.Println(pURL,PI)
 
 	// 隐式定义
+	const PI = 3.14
+	
+	fmt.Println(pURL,PI)
 
 	// 常量组
 	const (
