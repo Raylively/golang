@@ -11,10 +11,9 @@ func main() {
 
 	// 显示定义
 	const pURL string = "http://baidu.com"
-
 	// 隐式定义
 	const PI = 3.14
-	
+
 	fmt.Println(pURL,PI)
 
 	// 常量组
@@ -55,5 +54,12 @@ func main() {
 	)
 	fmt.Println(a,b,c)
 	fmt.Println(d,e,f)
+
+
+	// 双引号赋值的是string ,单引号赋值的是编码
+	var s1 = 'A'
+	var s2 = "A"
+	fmt.Println("%d,%T",s1,s1)
+	fmt.Println("%f,%T",s2,s2)
 	
 }
