@@ -59,5 +59,27 @@ func main(){
 		sum3+= v
 	}
 	fmt.Println(sum3)
+	
+	
+	/*
+	多维数组
+	*/
+
+	b := [3][4]int{
+		{1,2,3,4},
+		{5,6,7,8},
+		{9,10,11,12}}
+	fmt.Println(b)
+	fmt.Println(len(b))
+	for i,v := range b{
+		fmt.Println(i,v)
+	}
+	fmt.Println(b[0][1])
+	for _,v := range b{
+		for i1,v1:= range v{
+			fmt.Print(i1,v1,"\t")
+		}
+		fmt.Println()
+	}
 
 }
