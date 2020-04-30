@@ -55,5 +55,18 @@ func main(){
 	for true {}
 	for ;;{}
 	*/
-
+	/*
+	贴标签跳出外层循环
+	*/
+	out:
+	for i:=1; i<=10; i++ {
+		for j:=1; j<i; j++{
+			if j >= 5{
+				break out
+			} else{
+				fmt.Print(i+j)
+			}
+		}
+		fmt.Println()
+	}
 }
