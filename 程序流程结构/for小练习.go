@@ -95,5 +95,25 @@ func main(){
 			}
 		}
 	}
+	/*
+	1-5月的总天数
+	*/
+	sum :=0
+	year := 2001
+	for i:=1; i<=5; i++{
+		switch i {
+		case 1,3,5:
+			sum += 31
+		case 4:
+			sum += 30
+		case 2:
+			if year % 4 == 0 && year % 100 != 0 || year % 400 == 0{
+				sum += 29
+			} else {
+				sum += 28
+			}
+		}
+	}
+	fmt.Println(sum)
 
 }
