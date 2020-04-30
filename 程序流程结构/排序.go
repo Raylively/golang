@@ -1,3 +1,10 @@
+package main 
+
+import (
+    "fmt"
+)
+
+
 func main(){
 	/*
 	冒泡排序
