@@ -115,5 +115,22 @@ func main(){
 		}
 	}
 	fmt.Println(sum)
+	
+	/*
+	100以内的素数
+	*/
+	
+	for i:=2; i<101; i++ { 
+		var sushu bool = true
+		for j:=2; j<=i/2+1; j++ {
+			if i % j == 0{
+				sushu = false
+				break
+			}
+		}
+		if sushu {
+			fmt.Print(i,"\t")
+		}
+	}
 
 }
