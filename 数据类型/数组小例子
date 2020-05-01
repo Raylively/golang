@@ -1,0 +1,52 @@
+
+package main 
+
+import (
+	"fmt"
+	"math/rand"
+	"time"
+)
+
+
+func main(){
+	/*
+	n个人围城一圈，报数123，报到3的人退出，最终剩下的是几号
+	*/
+	rand.Seed(time.Now().UnixNano())
+	arr1 := [10]int{}
+	for i:=0; i<10; i++{
+		arr1[i] = rand.Intn(10)+1
+	}
+	for i,v := range arr1{
+		fmt.Println(i,v)
+	}
+	
+	const num = 10
+	arr2 := [num]bool{}
+	for i:=0; i<len(arr2); i++ {
+		arr2[i] = true
+	}
+	fmt.Println(arr2)
+	count := 0
+	outerCount := 0
+	index := 0
+	for outerCount < num-1 {
+		if arr2[index] == true {
+			count++
+			if count == 3 {
+				count = 0
+				outerCount++
+				arr2[index] = false
+			}
+		}
+		index++
+		if index == len(arr2){
+			index = 0
+		}
+	}
+	for i,v := range arr2{
+		if v == true {
+			fmt.Println(i)
+		}
+	}
+}
